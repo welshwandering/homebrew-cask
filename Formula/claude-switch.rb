@@ -11,6 +11,15 @@ class ClaudeSwitch < Formula
     bin.install "scripts/claude-switch.sh" => "claude-switch"
   end
 
+  def caveats
+    <<~EOS
+      v2.0.0 BREAKING CHANGE: Accounts saved with v1.0.0 must be re-saved.
+
+      For each account, log in via Claude Code and run:
+        claude-switch save <account-name>
+    EOS
+  end
+
   test do
     assert_match "Usage:", shell_output("#{bin}/claude-switch --help")
   end
