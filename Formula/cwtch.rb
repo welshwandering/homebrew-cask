@@ -1,8 +1,8 @@
 class Cwtch < Formula
   desc "Manage Claude Code profiles and usage"
   homepage "https://github.com/agh/cwtch"
-  url "https://github.com/agh/cwtch/archive/refs/tags/v3.0.0.tar.gz"
-  sha256 "b2debd95c0389e23a71ce5d81d2941d1f2072f4c00b85e6ac3c7da0fa23281fe"
+  url "https://github.com/agh/cwtch/archive/refs/tags/v4.0.0.tar.gz"
+  sha256 "4cd057b459b75dfb092d6a998cb78a93db9f02b1a56326d524843baf02235f0e"
   license "MIT"
 
   depends_on :macos
