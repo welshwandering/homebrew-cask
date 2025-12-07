@@ -1,21 +1,24 @@
 class ClaudeSwitch < Formula
   desc "Switch between Claude Code accounts"
   homepage "https://github.com/agh/claude-utils"
-  url "https://github.com/agh/claude-utils/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "badd80acf85fc8a1cee3366b860bf8ed4a89f2123c174f13379da862872c561e"
+  url "https://github.com/agh/claude-utils/archive/refs/tags/v2.1.0.tar.gz"
+  sha256 "228c48a9011a7624a66e145fd4cae1aea8b8fe8dc9fcca3537bb53858b1d02ef"
   license "MIT"
 
   depends_on :macos
+  depends_on "jq"
 
   def install
-    bin.install "scripts/claude-switch.sh" => "claude-switch"
+    libexec.install "scripts"
+    libexec.install "lib"
+    bin.install_symlink libexec/"scripts/claude-switch.sh" => "claude-switch"
   end
 
   def caveats
     <<~EOS
-      v2.0.0 BREAKING CHANGE: Accounts saved with v1.0.0 must be re-saved.
+      New in v2.1.0: Use `claude-switch status` to view usage for all accounts.
 
-      For each account, log in via Claude Code and run:
+      Upgrading from v1.x? Re-save each account:
         claude-switch save <account-name>
     EOS
   end
