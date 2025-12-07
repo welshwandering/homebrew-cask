@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["Formula/cwtch\\.rb$"],
+      "matchStrings": [
+        "url \"https://github\\.com/agh/cwtch/archive/refs/tags/(?<currentValue>v[\\d.]+)\\.tar\\.gz\""
+      ],
+      "depNameTemplate": "agh/cwtch",
+      "datasourceTemplate": "github-releases"
+    }
+  ]
+}
