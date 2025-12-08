@@ -1,13 +1,14 @@
 class Cwtch < Formula
-  desc "Manage Claude Code profiles and usage"
+  desc "Manage Claude Code profiles and sync configuration from Git"
   homepage "https://github.com/agh/cwtch"
   # renovate: datasource=github-releases depName=agh/cwtch
-  url "https://github.com/agh/cwtch/archive/refs/tags/v5.0.0tar.gz"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  url "https://github.com/agh/cwtch/archive/refs/tags/v5.0.0.tar.gz"
+  sha256 "1d7b75735e9f09efd8a676618fad9368a9f93e32ff6cd6d2e7a4d83b9dd2f4bd"
   license "MIT"
 
   depends_on :macos
   depends_on "jq"
+  depends_on "yq"
 
   def install
     libexec.install "bin"
@@ -17,13 +18,13 @@ class Cwtch < Formula
 
   def caveats
     <<~EOS
-      cwtch manages Claude Code profiles and usage.
+      cwtch manages Claude Code profiles and syncs configuration from Git.
 
       Quick start:
         cwtch profile save work    # Save current session
         cwtch profile use personal # Switch profiles
-        cwtch status               # Show current profile + usage
-        cwtch usage                # Show all profiles usage
+        cwtch sync init            # Create Cwtchfile
+        cwtch sync                 # Sync configuration from Git
 
       Note: This project is not affiliated with Anthropic PBC.
     EOS
