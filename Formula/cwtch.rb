@@ -2,8 +2,8 @@ class Cwtch < Formula
   desc "Manage Claude Code profiles and sync configuration from Git"
   homepage "https://github.com/agh/cwtch"
   # renovate: datasource=github-releases depName=agh/cwtch
-  url "https://github.com/agh/cwtch/archive/refs/tags/v5.0.2.tar.gz"
-  sha256 "d3b5149a3cd46dad68da4655717c6a23c3933b97d177a7177d3dfef35dab537e"
+  url "https://github.com/agh/cwtch/archive/refs/tags/v5.1.0.tar.gz"
+  sha256 "1c6ae28ea025cd4580539244304bdac8a8e85ff705361ac7999b80e27592697f"
   license "MIT"
 
   depends_on :macos
@@ -13,6 +13,7 @@ class Cwtch < Formula
   def install
     libexec.install "bin"
     libexec.install "lib"
+    libexec.install "VERSION"
     bin.install_symlink libexec/"bin/cwtch"
   end
 
@@ -31,6 +32,6 @@ class Cwtch < Formula
   end
 
   test do
-    assert_match "Usage:", shell_output("#{bin}/cwtch --help")
+    assert_match "cwtch", shell_output("#{bin}/cwtch --help")
   end
 end
