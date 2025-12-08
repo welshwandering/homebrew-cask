@@ -2,7 +2,7 @@ class Cwtch < Formula
   desc "Manage Claude Code profiles and usage"
   homepage "https://github.com/agh/cwtch"
   # renovate: datasource=github-releases depName=agh/cwtch
-  url "https://github.com/agh/cwtch/archive/refs/tags/v4.0.4tar.gz"
+  url "https://github.com/agh/cwtch/archive/refs/tags/v5.0.0tar.gz"
   sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
   license "MIT"
 
