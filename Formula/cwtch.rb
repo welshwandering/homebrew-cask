@@ -7,8 +7,8 @@ class Cwtch < Formula
   license "MIT"
 
   depends_on "jq"
-  depends_on "yq"
   depends_on :macos
+  depends_on "yq"
 
   def install
     libexec.install "bin"
