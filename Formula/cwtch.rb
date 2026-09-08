@@ -1,14 +1,14 @@
 class Cwtch < Formula
   desc "Manage Claude Code profiles and sync configuration from Git"
-  homepage "https://github.com/welshwandering/cwtch"
-  # renovate: datasource=github-releases depName=welshwandering/cwtch
-  url "https://github.com/welshwandering/cwtch/archive/refs/tags/v5.3.0.tar.gz"
+  homepage "https://github.com/agh/cwtch"
+  # renovate: datasource=github-releases depName=agh/cwtch
+  url "https://github.com/agh/cwtch/archive/refs/tags/v5.3.0.tar.gz"
   sha256 "fdcb6773b7e08672a7a8d7980b66086effd3e3a90b6129056d0b1a56fd0d313f"
   license "MIT"
 
-  depends_on :macos
   depends_on "jq"
   depends_on "yq"
+  depends_on :macos
 
   def install
     libexec.install "bin"

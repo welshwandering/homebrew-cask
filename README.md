@@ -1,20 +1,19 @@
 # Homebrew Cask
 
-Personal Homebrew tap for @agh.
+Personal Homebrew tap for [@agh](https://github.com/agh).
 
 ## Usage
 
 ```bash
-brew tap agh/cask
-brew install claude-switch
+brew install agh/cask/cwtch
 ```
 
-## Formulas
+## Formulae
 
 | Formula | Description |
 |---------|-------------|
-| `claude-switch` | Switch between Claude Code accounts |
+| `cwtch` | Manage Claude Code profiles and synchronise configuration from Git ([agh/cwtch](https://github.com/agh/cwtch)) |
 
-## License
+## Licence
 
 [MIT](LICENSE)
