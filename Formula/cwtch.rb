@@ -6,14 +6,14 @@ class Cwtch < Formula
   sha256 "35070bccbe73baa0ee35a3bf5dc19bb7c21711420e2215cb3cfce187859a115f"
   license "MIT"
 
-  depends_on "jq"
-  depends_on :macos
-  depends_on "yq"
-
   livecheck do
     url :stable
     strategy :github_latest
   end
+
+  depends_on "jq"
+  depends_on :macos
+  depends_on "yq"
 
   def install
     libexec.install "bin"
